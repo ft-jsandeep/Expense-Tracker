@@ -1,4 +1,5 @@
 .App-section {
+  height: 100vh;
   display: flex;
   justify-content: left;
   align-items: flex-start;

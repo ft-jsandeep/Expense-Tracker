@@ -10,15 +10,20 @@ export default function ExpensesList(props) {
   }
 
   return (
-    <ul className={styles["expenses-list"]}>
-      {props.items.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
-    </ul>
+    <div className={styles["expenses-list__container"]}>
+      <div className={styles["expenses-list__header"]}>
+        <p>Details</p>
+      </div>
+      <ul className={styles["expenses-list"]}>
+        {props.items.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }

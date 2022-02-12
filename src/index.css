@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(69, 69, 155);
+  background: rgb(11, 17, 33);
   overflow-y: hidden;
 }
 
@@ -13,7 +13,7 @@ body::before {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(69, 69, 155, 0.35);
+  background: rgba(11, 17, 33, 0.35);
   position: absolute;
   top: 0;
   left: 0;

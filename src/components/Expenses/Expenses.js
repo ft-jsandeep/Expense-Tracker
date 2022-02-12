@@ -16,13 +16,15 @@ export default function Expenses(props) {
   });
 
   return (
-    <Card className={styles.expenses}>
-      <ExpensesFilter
-        selected={filteredYear}
-        onChangeFilterYear={filterChangeHandler}
-      />
-      <ExpensesChart expenses={filteredExpenses} />
+    <div className={styles["expenses-container"]}>
+      <Card className={styles.expenses}>
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilterYear={filterChangeHandler}
+        />
+        <ExpensesChart expenses={filteredExpenses} />
+      </Card>
       <ExpensesList items={filteredExpenses} />
-    </Card>
+    </div>
   );
 }

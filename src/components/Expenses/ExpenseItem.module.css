@@ -1,7 +1,7 @@
 .expense-item {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 0.5rem;
   margin: 1rem 0;
   background-color: #4b4b4b;
