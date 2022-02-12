@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
+import Header from "./components/Header/Header";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 const DummyExpenses = [
@@ -32,9 +33,12 @@ function App() {
     });
   };
   return (
-    <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses expenses={expenses} />
+    <div className="App">
+      <Header />
+      <div className="App-section">
+        <NewExpense onAddExpense={addExpenseHandler} />
+        <Expenses expenses={expenses} />
+      </div>
     </div>
   );
 }

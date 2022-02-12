@@ -5,6 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(69, 69, 155);
+  overflow-y: hidden;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(69, 69, 155, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  backdrop-filter: blur(30px);
+}
+
+body::after {
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  bottom: -1rem;
+  right: 30rem;
+  z-index: -2;
 }
 
 code {
