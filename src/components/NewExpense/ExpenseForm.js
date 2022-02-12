@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ExpenseForm.css";
+import styles from "./ExpenseForm.module.css";
 
 export default function ExpenseForm(props) {
   // const [userInput, setUserInput] = useState({
@@ -77,28 +77,35 @@ export default function ExpenseForm(props) {
   };
 
   if (!formDisplay) {
-    return <button onClick={formDisplayHandler}>Add New Expense</button>;
+    return (
+      <button
+        className={styles["new-expense__actions_button"]}
+        onClick={formDisplayHandler}
+      >
+        Add New Expense
+      </button>
+    );
   }
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="new-expense__controls">
-        <div className="new-expense__control">
+      <div className={styles["new-expense__controls"]}>
+        <div className={styles["new-expense__control"]}>
           <label htmlFor="new-expense__title">Title</label>
           <input
             type="text"
-            id="new-expense__title"
+            id={styles["new-expense__title"]}
             onChange={titleChangeHandler}
             // value={userInput.Title}
             value={enteredTitle}
             required
           />
         </div>
-        <div className="new-expense__control">
-          <label htmlFor="new-expense__amount">Amount</label>
+        <div className={styles["new-expense__control"]}>
+          <label htmlFor={styles["new-expense__amount"]}>Amount</label>
           <input
             type="number"
-            id="new-expense__amount"
+            id={styles["new-expense__amount"]}
             min="1"
             step="1"
             onChange={amountChangeHandler}
@@ -107,11 +114,11 @@ export default function ExpenseForm(props) {
             required
           />
         </div>
-        <div className="new-expense__control">
+        <div className={styles["new-expense__control"]}>
           <label htmlFor="new-expense__date">Date</label>
           <input
             type="date"
-            id="new-expense__date"
+            id={styles["new-expense__date"]}
             min="2021-01-01"
             max="2023-12-31"
             onChange={dateChangeHandler}
@@ -121,9 +128,16 @@ export default function ExpenseForm(props) {
           />
         </div>
       </div>
-      <div className="new-expense__actions">
-        <button onClick={hideFormHandler}>Cancel</button>
-        <button type="submit">Add Expense</button>
+      <div className={styles["new-expense__actions"]}>
+        <button
+          className={styles["new-expense__actions_button"]}
+          onClick={hideFormHandler}
+        >
+          Cancel
+        </button>
+        <button className={styles["new-expense__actions_button"]} type="submit">
+          Add Expense
+        </button>
       </div>
     </form>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
 import ChartBar from "./ChartBar";
-import "./Chart.css";
+import styles from "./Chart.module.css";
 
 export default function Chart(props) {
   let userMax = 1000; // Set by user currently static; will be dynamic and taken as input ny user
@@ -11,7 +11,7 @@ export default function Chart(props) {
   //     totalMaximum = userMax;
   totalMaximum = Math.max(userMax, totalMaximum);
   return (
-    <div className="chart">
+    <div className={styles.chart}>
       {props.dataPoints.map((dataPoint) => (
         <ChartBar
           key={dataPoint.label}

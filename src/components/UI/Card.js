@@ -1,8 +1,10 @@
 import React from "react";
-import "./Card.css";
+import styles from "./Card.module.css";
 
 export default function Card(props) {
-  const classes = "card " + props.className;
+  // const classes = styles.Card + props.className;
 
-  return <div className={classes}>{props.children}</div>;
+  return (
+    <div className={`${styles.card} ${props.className}`}>{props.children}</div>
+  );
 }

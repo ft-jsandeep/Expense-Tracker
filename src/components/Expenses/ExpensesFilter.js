@@ -1,14 +1,14 @@
 import React from "react";
 
-import "./ExpensesFilter.css";
+import styles from "./ExpensesFilter.module.css";
 
 const ExpensesFilter = (props) => {
   const filterYearHandler = (event) => {
     props.onChangeFilterYear(event.target.value);
   };
   return (
-    <div className="expenses-filter">
-      <div className="expenses-filter__control">
+    <div className={styles["expenses-filter"]}>
+      <div className={styles["expenses-filter__control"]}>
         <label>Filter by year</label>
         <select value={props.selected} onChange={filterYearHandler}>
           <option value="2022">2022</option>
