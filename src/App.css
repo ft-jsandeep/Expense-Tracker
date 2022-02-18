@@ -7,6 +7,14 @@
   height: 100vh;
   max-width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   /* align-items: flex-start; */
 }
+
+/* @media (max-width: 1080px) {
+  .App-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} */

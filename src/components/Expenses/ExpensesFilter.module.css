@@ -1,5 +1,5 @@
 .expenses-filter {
-  color: white;
+  color: #fdecef;
   padding: 0 1rem;
 }
 
@@ -25,4 +25,10 @@
   color: #fdecef;
   outline: none;
   border: none;
+}
+
+@media (max-width: 1020px) {
+  .expenses-filter__control {
+    margin: 1rem 0;
+  }
 }

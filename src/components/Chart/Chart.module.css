@@ -8,3 +8,9 @@
   justify-content: space-around;
   height: 25rem;
 }
+
+@media (max-width: 1020px) {
+  .chart {
+    height: 15rem;
+  }
+}

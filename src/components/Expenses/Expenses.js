@@ -6,7 +6,10 @@ import ExpensesFilter from "./ExpensesFilter";
 import ExpensesChart from "./ExpensesChart";
 
 export default function Expenses(props) {
-  const [filteredYear, setFilteredYear] = useState("2022");
+  let currentDate = new Date();
+  const [filteredYear, setFilteredYear] = useState(
+    currentDate.getFullYear().toString()
+  );
   const filterChangeHandler = (filterYear) => {
     setFilteredYear(filterYear);
   };
@@ -24,7 +27,7 @@ export default function Expenses(props) {
         />
         <ExpensesChart expenses={filteredExpenses} setLimit={props.setLimit} />
       </Card>
-      <ExpensesList items={filteredExpenses} />
+      <ExpensesList items={filteredExpenses} setLimit={props.setLimit} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpenseForm from "./ExpenseForm";
 import ExpenseLimit from "./ExpenseLimit";
 import styles from "./NewExpense.module.css";
 
 export default function NewExpense(props) {
+  const [maxLimit, setmaxLimit] = useState(1000);
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
@@ -14,6 +15,7 @@ export default function NewExpense(props) {
   };
 
   const changeUserLimitHandler = (userLimit) => {
+    setmaxLimit(userLimit);
     props.onSetLimit(userLimit);
   };
 
@@ -21,6 +23,10 @@ export default function NewExpense(props) {
     <div className={styles["new-expense"]}>
       <ExpenseLimit onChangeUserLimit={changeUserLimitHandler} />
       <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+      <div className={styles["max-expense-limit"]}>
+        <p>Current limit</p>
+        <p>{maxLimit}</p>
+      </div>
     </div>
   );
 }

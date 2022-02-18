@@ -8,7 +8,13 @@ body {
   font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: rgb(11, 17, 33); */
+  background: #151b2b;
   width: 100vw;
-  overflow-y: hidden;
+  overflow: hidden;
+}
+
+@media (max-width: 1080px) {
+  body {
+    overflow-y: visible;
+  }
 }

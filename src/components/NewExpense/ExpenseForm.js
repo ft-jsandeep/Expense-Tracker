@@ -78,12 +78,14 @@ export default function ExpenseForm(props) {
 
   if (!formDisplay) {
     return (
-      <button
-        className={styles["new-expense__actions_button"]}
-        onClick={formDisplayHandler}
-      >
-        Add New Expense
-      </button>
+      <div className={styles["new-expense-form__button"]}>
+        <button
+          className={`${styles["new-expense__actions_button"]} ${styles["add-new-expense__button"]}`}
+          onClick={formDisplayHandler}
+        >
+          Add New Expense
+        </button>
+      </div>
     );
   }
 

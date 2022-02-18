@@ -36,3 +36,9 @@
   color: white;
   margin-top: 1rem;
 }
+
+@media (max-width: 1020px) {
+  .chart-bar__label {
+    font-size: 0.5rem;
+  }
+}

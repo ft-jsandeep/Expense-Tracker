@@ -1,3 +1,12 @@
+form::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #4d546a;
+  margin: 2em auto;
+}
+
 .new-expense__controls {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +19,7 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  color: white;
+  color: #fdecef;
 }
 
 .new-expense__control input {
@@ -33,7 +42,7 @@
   padding: 4% 8%;
   border: 1px solid #40005d;
   background-color: #40005d;
-  color: white;
+  color: #fdecef;
   border-radius: 0.4em;
   margin-left: 0.5rem;
 }
@@ -53,4 +62,22 @@
 .new-expense__actions_button.alternative:hover,
 .new-expense__actions_button.alternative:active {
   background-color: #ddb3f8;
+}
+
+.new-expense-form__button {
+  margin: 1rem 0;
+}
+
+.new-expense-form__button::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #4d546a;
+  margin: 2em auto;
+}
+
+.add-new-expense__button {
+  margin-left: 0;
+  width: 100%;
 }

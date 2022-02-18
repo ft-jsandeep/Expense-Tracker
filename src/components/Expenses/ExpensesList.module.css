@@ -1,4 +1,5 @@
 .expenses-list__container {
+  display: block;
   background: rgba(11, 17, 33, 0.35);
   /* box-shadow: inset 3px 0 5px 0 rgba(255, 255, 255, 0.3); */
   border-left: 1px solid #4d546a;
@@ -11,14 +12,14 @@
 .expenses-list__header {
   width: 100%;
   height: 3em;
-  background: grey;
+  background: #40005d;
   display: flex;
   align-items: center;
   margin-top: 2em;
 }
 
 .expenses-list__header p {
-  color: white;
+  color: #fdecef;
   margin: 0;
   padding: 0 2em;
 }
@@ -31,6 +32,10 @@
 .expenses-list__fallback {
   color: white;
   text-align: center;
+}
+
+.expenses-list.close {
+  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -53,4 +58,89 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6600ff;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5em;
+  height: 2em;
+  cursor: pointer;
+  margin-left: 10rem;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 2em;
+  height: 4px;
+  background: #fdecef;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 4px;
+  background: #fdecef;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+@media (max-width: 1380px) {
+  .menu-btn {
+    margin-left: auto;
+  }
+  .expenses-list {
+    padding: 0 1rem;
+  }
+  .expenses-list__container {
+    width: 24vw;
+  }
+}
+
+@media (max-width: 1180px) {
+  .expenses-list__container {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 1020px) {
+  .expenses-list {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    list-style: none;
+    padding: 0 2rem;
+    background: rgb(11, 17, 33);
+  }
+  .expenses-list__header p {
+    padding: 0 1rem;
+  }
+  /* .menu-btn {
+    display: flex;
+  } */
 }

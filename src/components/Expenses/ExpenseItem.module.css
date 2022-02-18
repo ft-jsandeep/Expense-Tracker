@@ -9,10 +9,10 @@
 
 .expense-item__description {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
-  align-items: flex-end;
-  flex-flow: column-reverse;
+  align-items: center;
+  /* flex-flow: column-reverse; */
   justify-content: flex-start;
   flex: 1;
   /* width: 5vw; */
@@ -20,29 +20,28 @@
 
 .expense-item h2 {
   color: #3a3a3a;
-  font-size: 1em;
+  font-size: 1.25em;
   flex: 1;
   margin: 0 1rem;
   color: white;
 }
 
 .expense-item__price {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: white;
   /* background-color: #40005d; */
   background-color: #40005d;
   border: 1px solid #40005d;
-  padding: 0.2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 12px;
 }
 
-@media (min-width: 580px) {
+/* @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    /* flex: 1; */
   }
 
   .expense-item__description h2 {
@@ -52,5 +51,34 @@
   .expense-item__price {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
+  }
+} */
+
+@media (max-width: 1380px) {
+  .expense-item__description h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1280px) {
+  .expense-item__price {
+    font-size: 1rem;
+    padding: 0.4em 1.4rem;
+  }
+}
+
+@media (max-width: 1020px) {
+  .expense-item {
+    padding: 0.4em;
+  }
+  .expense-item__description h2 {
+    font-size: 0.75em;
+  }
+  .expense-item__price {
+    font-size: 0.75rem;
+    padding: 0.2em 1.2rem;
+  }
+  .expense-item__description {
+    gap: 0;
   }
 }

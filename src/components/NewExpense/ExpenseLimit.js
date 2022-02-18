@@ -3,6 +3,7 @@ import styles from "./ExpenseLimit.module.css";
 
 export default function ExpenseLimit(props) {
   const [expenseLimit, setExpenseLimit] = useState(1000);
+  const [formDisplay, setFormDisplay] = useState(false);
 
   const inputLimitHandler = (e) => {
     setExpenseLimit(+e.target.value);
@@ -12,6 +13,27 @@ export default function ExpenseLimit(props) {
     e.preventDefault();
     props.onChangeUserLimit(expenseLimit);
   };
+
+  const formDisplayHandler = () => {
+    setFormDisplay(true);
+  };
+
+  const hideFormHandler = () => {
+    setFormDisplay(false);
+  };
+
+  if (!formDisplay) {
+    return (
+      <div className={styles["max-expense-limit"]}>
+        <button
+          className={`${styles["max-expense-limit__button"]}`}
+          onClick={formDisplayHandler}
+        >
+          Set maximum expense Limit
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={expenselimitSubmitHandler}>
@@ -27,6 +49,7 @@ export default function ExpenseLimit(props) {
           />
         </div>
         <div className={styles["ExpenseLimit__action"]}>
+          <button onClick={hideFormHandler}>Cancel</button>
           <button type="submit">Set limit</button>
         </div>
       </div>

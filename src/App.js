@@ -42,7 +42,6 @@ function App() {
   const setLimitHandler = (Limit) => {
     setUserLimit(Limit);
   };
-  // console.log(typeof userLimit);
   return (
     <div className="App">
       <Header />
