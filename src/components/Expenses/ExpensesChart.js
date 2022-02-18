@@ -22,5 +22,5 @@ export default function ExpensesChart(props) {
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 
-  return <Chart dataPoints={chartDataPoints} />;
+  return <Chart dataPoints={chartDataPoints} setLimit={props.setLimit} />;
 }

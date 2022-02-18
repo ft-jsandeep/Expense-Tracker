@@ -94,7 +94,7 @@ export default function ExpenseForm(props) {
           <label htmlFor="new-expense__title">Title</label>
           <input
             type="text"
-            id={styles["new-expense__title"]}
+            id="new-expense__title"
             onChange={titleChangeHandler}
             // value={userInput.Title}
             value={enteredTitle}
@@ -102,10 +102,10 @@ export default function ExpenseForm(props) {
           />
         </div>
         <div className={styles["new-expense__control"]}>
-          <label htmlFor={styles["new-expense__amount"]}>Amount</label>
+          <label htmlFor="new-expense__amount">Amount</label>
           <input
             type="number"
-            id={styles["new-expense__amount"]}
+            id="new-expense__amount"
             min="1"
             step="1"
             onChange={amountChangeHandler}
@@ -118,7 +118,7 @@ export default function ExpenseForm(props) {
           <label htmlFor="new-expense__date">Date</label>
           <input
             type="date"
-            id={styles["new-expense__date"]}
+            id="new-expense__date"
             min="2021-01-01"
             max="2023-12-31"
             onChange={dateChangeHandler}

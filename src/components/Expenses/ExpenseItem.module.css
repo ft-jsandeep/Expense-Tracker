@@ -1,10 +1,10 @@
 .expense-item {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  padding: 0.5rem;
+  padding: 0.5em;
   margin: 1rem 0;
-  background-color: #4b4b4b;
+  background-color: #222a35;
+  box-shadow: inset 4px 4px 10px 0 rgba(255, 255, 255, 0.2),
+    -6px -6px 10px 0 rgba(11, 17, 33, 1);
+  width: 100%;
 }
 
 .expense-item__description {
@@ -15,11 +15,12 @@
   flex-flow: column-reverse;
   justify-content: flex-start;
   flex: 1;
+  /* width: 5vw; */
 }
 
 .expense-item h2 {
   color: #3a3a3a;
-  font-size: 1rem;
+  font-size: 1em;
   flex: 1;
   margin: 0 1rem;
   color: white;
@@ -29,9 +30,10 @@
   font-size: 1rem;
   font-weight: bold;
   color: white;
+  /* background-color: #40005d; */
   background-color: #40005d;
-  border: 1px solid white;
-  padding: 0.5rem;
+  border: 1px solid #40005d;
+  padding: 0.2rem;
   border-radius: 12px;
 }
 
@@ -40,7 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    flex: 1;
+    /* flex: 1; */
   }
 
   .expense-item__description h2 {

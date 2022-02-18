@@ -3,10 +3,18 @@ import styles from "./ExpensesList.module.css";
 import ExpenseItem from "./ExpenseItem";
 
 export default function ExpensesList(props) {
-  if (props.items.length === 0) {
-    return (
-      <h2 className={styles["expenses-list__fallback"]}>Found no expenses.</h2>
-    );
+  let expensesContent = (
+    <h2 className={styles["expenses-list__fallback"]}>Found no expenses.</h2>
+  );
+  if (props.items.length > 0) {
+    expensesContent = props.items.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
   }
 
   return (
@@ -14,16 +22,7 @@ export default function ExpensesList(props) {
       <div className={styles["expenses-list__header"]}>
         <p>Details</p>
       </div>
-      <ul className={styles["expenses-list"]}>
-        {props.items.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
-      </ul>
+      <ul className={styles["expenses-list"]}>{expensesContent}</ul>
     </div>
   );
 }

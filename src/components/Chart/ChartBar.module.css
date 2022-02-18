@@ -7,10 +7,12 @@
 
 .chart-bar__inner {
   height: 100%;
-  width: 2em;
+  width: 2vw;
   /* border: 1px solid #313131; */
-  background: rgba(11, 17, 33, 0.35);
-  box-shadow: inset 3px 4px 10px 0 rgba(255, 255, 255, 0.3);
+  /* background: rgba(11, 17, 33, 0.35); */
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 4px 4px 10px 0 rgba(255, 255, 255, 0.3),
+    inset -5px -5px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   /* background-color: #c3b4f3; */
   overflow: hidden;
@@ -21,14 +23,16 @@
 
 .chart-bar__fill {
   background-color: #4826b9;
-  box-shadow: inset 5px 0 10px 0 rgba(255, 255, 255, 0.3);
+  /* box-shadow: inset 5px 0 10px 0 rgba(255, 255, 255, 0.3); */
+  box-shadow: inset 4px 4px 10px 0 rgba(255, 255, 255, 0.3),
+    inset -5px -5px 10px 5px rgba(0, 0, 0, 0.2);
   width: 100%;
   transition: all 0.3s ease-out;
 }
 
 .chart-bar__label {
-  font-weight: bold;
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
+  margin-top: 1rem;
 }

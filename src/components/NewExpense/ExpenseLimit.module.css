@@ -1,0 +1,66 @@
+.ExpenseLimit {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.ExpenseLimit::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #4d546a;
+  margin: 1em auto;
+}
+
+.ExpenseLimit__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: white;
+}
+
+.ExpenseLimit__control input {
+  font: inherit;
+  padding: 0.4em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 17vw;
+  /* max-width: 100%; */
+}
+
+.ExpenseLimit__action {
+  width: 100%;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.ExpenseLimit__action button {
+  font: inherit;
+  cursor: pointer;
+  padding: 4% 8%;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  color: white;
+  border-radius: 12px;
+}
+
+.ExpenseLimit__action button:hover,
+.ExpenseLimit__action button:active {
+  background-color: #510674;
+  border-color: #510674;
+}
+
+.ExpenseLimit__action button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.ExpenseLimit__action button.alternative:hover,
+.ExpenseLimit__action button.alternative:active {
+  background-color: #ddb3f8;
+}

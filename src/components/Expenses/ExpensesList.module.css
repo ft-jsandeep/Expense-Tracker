@@ -1,7 +1,8 @@
 .expenses-list__container {
   background: rgba(11, 17, 33, 0.35);
-  box-shadow: inset 3px 0 5px 0 rgba(255, 255, 255, 0.3);
-  width: 22em;
+  /* box-shadow: inset 3px 0 5px 0 rgba(255, 255, 255, 0.3); */
+  border-left: 1px solid #4d546a;
+  width: 25vw;
   max-height: 90%;
   margin-top: -0.1rem;
   overflow-y: scroll;
@@ -30,4 +31,26 @@
 .expenses-list__fallback {
   color: white;
   text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+  opacity: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e00c2;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6600ff;
 }

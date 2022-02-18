@@ -22,7 +22,7 @@ export default function Expenses(props) {
           selected={filteredYear}
           onChangeFilterYear={filterChangeHandler}
         />
-        <ExpensesChart expenses={filteredExpenses} />
+        <ExpensesChart expenses={filteredExpenses} setLimit={props.setLimit} />
       </Card>
       <ExpensesList items={filteredExpenses} />
     </div>

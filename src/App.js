@@ -24,20 +24,34 @@ const DummyExpenses = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: "e5",
+    title: "Bike accessories",
+    amount: 950,
+    date: new Date(2022, 2, 14),
+  },
 ];
 function App() {
   const [expenses, setExpenses] = useState(DummyExpenses);
+  const [userLimit, setUserLimit] = useState(1000);
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
   };
+  const setLimitHandler = (Limit) => {
+    setUserLimit(Limit);
+  };
+  // console.log(typeof userLimit);
   return (
     <div className="App">
       <Header />
       <div className="App-section">
-        <NewExpense onAddExpense={addExpenseHandler} />
-        <Expenses expenses={expenses} />
+        <NewExpense
+          onAddExpense={addExpenseHandler}
+          onSetLimit={setLimitHandler}
+        />
+        <Expenses expenses={expenses} setLimit={userLimit} />
       </div>
     </div>
   );

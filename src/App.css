@@ -1,6 +1,12 @@
+.App {
+  background: center/cover repeat-x url("./appBackground.jpg");
+  max-width: 100vw;
+}
+
 .App-section {
   height: 100vh;
+  max-width: 100vw;
   display: flex;
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: center;
+  /* align-items: flex-start; */
 }
