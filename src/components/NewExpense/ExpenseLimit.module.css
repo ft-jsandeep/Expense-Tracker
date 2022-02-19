@@ -58,7 +58,8 @@
 
 .ExpenseLimit__action {
   width: 100%;
-  text-align: right;
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
 
@@ -70,6 +71,7 @@
   background-color: #40005d;
   color: white;
   border-radius: 12px;
+  margin-left: 0.5rem;
 }
 
 .ExpenseLimit__action button:hover,

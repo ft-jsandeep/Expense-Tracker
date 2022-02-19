@@ -24,7 +24,7 @@ export default function NewExpense(props) {
       <ExpenseLimit onChangeUserLimit={changeUserLimitHandler} />
       <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
       <div className={styles["max-expense-limit"]}>
-        <p>Current limit</p>
+        <h4>Current limit:</h4>
         <p>{maxLimit}</p>
       </div>
     </div>
